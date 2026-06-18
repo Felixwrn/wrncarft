@@ -50,4 +50,154 @@
         /* Hero Section (Ganz oben) */
         .hero {
             text-align: center;
-            padding: 140px 20px 1
+            padding: 140px 20px 100px;
+            background: radial-gradient(circle at top, #1a1a24 0%, #0d0d0f 70%);
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 700;
+            letter-spacing: -2px;
+            margin: 0 0 20px 0;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 24px;
+            color: #a1a1a6;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-weight: 400;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #f5f5f7;
+            color: #0d0d0f;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 30px; /* Abgerundete Buttons im Apple-Stil */
+            font-size: 16px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover { transform: scale(1.02); background-color: #ffffff; }
+
+        /* Projekt-Grid (Die Mods & Plugins) */
+        .projects-section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            margin-bottom: 60px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #161619;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px; /* Sanfte Ecken */
+            padding: 40px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #4ade80; /* Rahmen leuchtet grün beim Hovern */
+        }
+
+        .card-tag {
+            background: rgba(74, 222, 128, 0.1);
+            color: #4ade80;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card h3 { font-size: 28px; margin: 20px 0 10px; font-weight: 600; }
+        .card p { color: #a1a1a6; font-size: 16px; margin-bottom: 30px; }
+
+        .card-link {
+            color: #4ade80;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        
+        .card-link:hover { text-decoration: underline; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6e6e73;
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">MC<span>Dev</span></div>
+        <div class="nav-links">
+            <a href="#projekte">Projekte</a>
+            <a href="https://github.com/dein-name" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Next-Gen Minecraft.</h1>
+        <p>Maßgeschneiderte Mods und High-Performance Plugins für Server, die mehr wollen.</p>
+        <a href="#projekte" class="btn">Projekte ansehen</a>
+    </div>
+
+    <div class="projects-section" id="projekte">
+        <h2 class="section-title">Aktuelle Entwicklungen</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <span class="card-tag">Spigot Plugin</span>
+                <h3>EcoSystem Pro</h3>
+                <p>Ein leichtgewichtiges Economy-System, optimiert für große Server-Netzwerke mit asynchroner Datenbank-Anbindung.</p>
+                <a href="#" class="card-link">Download via GitHub →</a>
+            </div>
+
+            <div class="card">
+                <span class="card-tag">Fabric Mod</span>
+                <h3>Visual Overhaul</h3>
+                <p>Eine Client-seitige Mod, die das UI komplett im modernen Stil überarbeitet, ohne die Framerate zu beeinträchtigen.</p>
+                <a href="#" class="card-link">Zum Modrinth Profil →</a>
+            </div>
+
+            <div class="card">
+                <span class="card-tag">Server Core</span>
+                <h3>Custom API</h3>
+                <p>Eine interne Schnittstelle für Mini-Games, die Event-Handling und Player-Data synchronisiert.</p>
+                <a href="#" class="card-link">Dokumentation lesen →</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Minecraft Development. Coded with precision.
+    </footer>
+
+</body>
+</html>
